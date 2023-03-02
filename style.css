@@ -1,0 +1,100 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 62.5%;
+    background-color: #e5e5e5;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.acordeon {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 21px;
+    width: 655px;
+    min-height: 347px;
+    box-shadow: 11px 13px 20px -3px rgba(0,0,0,0.63);
+    position: absolute; /* Isso vai servir pra deslocar a
+    imagem pra fora do quadrado branco */
+}
+
+.acordeon .ilustracao {
+    position: absolute;
+    left: -90px;
+}
+
+.acordeon .conteudo {
+    width: 90%;
+    padding-left: 225px;
+}
+
+.acordeon .conteudo h1 {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.acordeon .itens {
+    list-style-type: none;
+}
+
+.acordeon .conteudo .itens .item .pergunta {
+    font-size: 17px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    transition: 0.2s ease;
+    width: 90%;
+}
+
+.acordeon .conteudo .itens .item .pergunta:hover {
+    font-weight: 700;
+}
+
+.acordeon .itens .item {
+    cursor: pointer;
+    background-image: url(img/seta-fechada.png);
+    background-repeat: no-repeat;
+    background-position: top 8px right 0;
+    background-size: 12px;
+    border-bottom: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.acordeon .itens .item:last-child {
+    border-bottom: none;
+}
+
+.resposta {
+    display: none;
+    padding-bottom: 15px;
+    font-weight: 300;
+    font-size: 15px;
+}
+
+/* ACORDEON ATIVO */
+.acordeon .itens .item.ativo h2 {
+    font-weight: 700;
+    font-size: 700px;
+}
+
+.acordeon .itens .item.ativo .resposta {
+    display: block;
+}
+
+.acordeon .itens .item.ativo {
+    background-image: url(img/seta.png);
+    background-size: 8px;
+    background-position: top 7px right 0;
+}
